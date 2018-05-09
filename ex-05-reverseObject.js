@@ -15,25 +15,12 @@
 function reverseObject(obj){
 	//console.log(obj);
 	var nobj = { };
-	var prop = [ ];
-	var val = [ ];
-
+	
 	for(var pro in obj){
 		//console.log("Property :", pro);
 		//console.log("value :", obj[pro]);
-		prop.push(pro);
-		val.push(obj[pro]);
-		//nobj.push({val: prop});
+		nobj[obj[pro]] = pro;
 	}
-	for(var i; i < val.length; i++){
-		var va = val[i];
-		var pr = prop[i];//for(var j; j< prop.length; j++){
-			nobj = {va: pr};
-		//}
-	}
-	//nobj.push(val: prop);
-	//console.log(prop);
-	//console.log(val);
 	//console.log(nobj);
 	return nobj;
 }
